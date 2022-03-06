@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>タイトル</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.scss">
+        <script src="js/particle.js"></script>
+        <script src="js/scroll.js"></script>
+        <link rel="icon" type="image/x-icon" href="img/"> <!--ファビコン設定-->
+        <link href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" rel="stylesheet"> <!--fontAwesome-->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="my-spinner" class="box">
+            <!-- type1 〜 type8 はお好みで -->
+            <div class="spinner type1">
+              <span>Loading...</span>
+            </div>
+          </div>
+    <!----- header----->
+        <header>
+            <nav>
+                <h1 class="icon-h1"><a href="#">AAAAAAAAAAA</a></h1>
+                <ul class="nav-icons">
+                    <li class="icon">
+                        <a class="" href="#">
+                            <p class="menu-p works-p">WORKS</p>
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a class="" href="#about">
+                            <p class="menu-p about-p">ABOUT</p>
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a class="" href="#contact">
+                            <p class="menu-p contact-p">CONTACT</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="particles-js"></div>
+        </header>
+        
+        <div class="container">
+            <div class="zigzag">
+            </div>
+            <div class="profile-wrapper">
+                <br><br>
+                <h2>PROFILE</h2>
+                <a id="about" class="anchor"></a>
+                <div class="profile">
+                    <p>氏名 : 石田優希</p>  
+                    <p>所属 : 立命館大学 情報理工学部 <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;セキュリティ・ネットワークコース </p>  
+                    <p>運営サイト : <a class="link" href="https://rust-wiki.net">格ゲー総合攻略</a></p>
+                    <p>自己紹介 : </p>
+                </div>
+            </div>
+          <h2>SKILL</h2>
+          <div class="skill">
+            <ul class="photo-list">
+                <li class="photo scr-target">
+                    <img class="laravel" src="img/laravel-logo.png">
+                </li>
+                <li class="skill-div">
+                    <p class="skill-p-1">Laravel</p>
+                    <p>Laravelフレームワークとデータベースを使用したWEBアプリの作成ができます。</p>
+                </li>
+            </ul>
+            <ul class="photo-list">
+                <li class="skill-div">
+                    <p class="skill-p-1">WordPress</p>
+                    <p>オリジナルテーマの作成、おしゃれなサイトの作成ができます。プラグインの作成はできません。</p>
+                </li>
+                <li class="photo scr-target2">
+                    <img class="wordpress" src="img/WordPress-logotype-wmark.png">
+                </li>
+            </ul>
+            <ul class="photo-list">
+                <li class="photo scr-target">
+                    <img class="html-css-js" src="img/4pm03n.png">
+                </li>
+                <li class="skill-div-html">
+                    <p class="skill-p-1">HTML・CSS・JavaScript</p>
+                    <p>基本的なコーディングはもちろん、レスポンシブ対応やJavaScriptを使った動的なサイトの作成も可能です</p>
+                </li>
+            </ul>
+          </div>
+        </div>
+
+        <br><br><br>
+        <footer>
+            <p class="contact">CONTACT</p>
+            <a id="contact" class="anchor"></a>
+            <form method="post" action="mail.php">
+                <table class="formTable">
+                  <tr>
+                  </tr>
+                  <tr>
+                    <th>お名前 <span style="color: rgb(248, 51, 51);">※</span></th>
+                    <td><input size="20" type="text" name="お名前" /></td>
+                  </tr>
+                  <tr>
+                    <th>メールアドレス <span style="color: rgb(248, 51, 51);">※</span></th>
+                    <td><input size="30" type="text" name="Email" /></td>
+                  </tr>
+                  <tr>
+                    <th>メッセージ <span style="color: rgb(248, 51, 51);">※</span><br /></th>
+                    <td><textarea name="お問い合わせ内容" cols="50" rows="5"></textarea></td>
+                  </tr>
+                </table>
+                <p align="center">
+                    <button type="submit" value="　 確認 　" class="button1">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </p>
+            </form>
+            
+            <br><br>
+            <ul class="snsbtniti">
+                <li><a href="https://github.com/lion-rion" class="flowbtn10"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="TwitterのプロフィールURL" class="flowbtn10"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="インスタのプロフィールURL" class="flowbtn10"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+            <p id="copyright">Copyright © SNOWWEB.com 2022 All Right Reserved.</p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+         <!-- IE対応↓ -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+        <!-- IE対応↑ -->
+        <script src="js/particle.js"></script>
+        <script src="js/fade.js"></script>
+    </body>
+</html>
+
+

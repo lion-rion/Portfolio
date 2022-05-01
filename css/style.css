@@ -2,23 +2,129 @@
 
 
 @media screen and (min-width: 981px){
-   
-    header{
-        position: relative;
-        width: 100%;
-        height: 70px;
+    body{
+        font-family: 'Economica', sans-serif;
+        
     }
 
+    .container{
+        padding: 0px 250px;
+        color: #fff;
+        
+    }
+    /*menu_setting*/
+    .nav-icons{
+        background-color: #fff;
+        display: flex;
+        height: 90px;
+        justify-content: center;
+    }
+    .menu-p{
+        margin: 30px 10px 10px 10px;
+        font-size: 25px;
+    }
+
+    /*profile_setting*/
+    .profile-wrapper{
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        padding: 100px;
+    }
+
+    .profile_img{
+        border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+        width:  350px;       /* ※縦横を同値に */
+        height: 350px;       /* ※縦横を同値に */
+        margin-right: 100px;
+        
+    }
+
+    .big_name{
+        
+        font-size: 100px;
+    }
+    
+    .profile-wrapper p{
+        font-size: 40px;
+    }
+
+    /*achievement_setting*/
+    .achievement{
+        margin-top: 200px;
+    }
+
+    .section_subtitile{
+        margin-top: 90px;
+        margin-bottom: 40px;
+        font-size: 50px;
+    }
+
+    .section_titile{
+        font-size: 80px;
+    }
+
+    .year{
+        margin: 30px 0 0 30px;
+        font-size: 40px;
+    }
+
+    .year_left{
+        font-size: 40px;
+        margin-left: 600px;
+    }
+
+    .tools_img{
+        width: 150px;
+    }
+
+    .flex{
+        display: flex;
+    }
+    .tools_img_spe{
+        margin: 30px 0px 0 10px;
+        width: 150px;
+    }
+
+    
+
+     /*========= particle js を描画するエリア設定 ===============*/
+    
+        #particles-js{ 
+        position:fixed;/*描画固定*/
+        z-index:-1;/*描画を一番下に*/
+        width: 100%;
+        height: 100vh;
+        background-color:rgb(35, 35, 35);/*背景色*/
+        }
+    
+        #wrapper{
+        position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+        z-index: -1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+        width:100%;
+        height: 100vh;
+        }
+    
+        article{
+            background-color: #fff;
+        }
+
+        
+    
 }
 
 /*----終了-----*/
-
+/*
 .icon p{
     font-family: "Courier New", Courier, "AXIS Std", monospace, Arial, serif, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
 }
-
+*/
 /*--------ここからスマホ用CSS設定----------*/
 @media screen and (max-width: 720px){
+
+    .profile_img{
+        display: none;
+    }
 
     header{
         width: 100%;

@@ -1,0 +1,422 @@
+
+    .profile_img{
+        display: none;
+    }
+
+    header{
+        width: 100%;
+        height: 100vh;
+       /* background-color: rgb(12, 12, 12); */
+    }
+    .header-img{
+        width: 100px;
+        height: 100px;
+    }
+    .menu-p{
+        font-size: 22px;
+        font-weight: 400;
+        margin-top: 10px;
+    }
+
+    .works-p:hover{
+        color: rgba(0, 204, 255, 0.678);
+        transition: 0.6s;
+    }
+
+    .about-p:hover{
+        color: rgba(223, 0, 111, 0.678);
+        transition: 0.6s;
+    }
+
+    .contact-p:hover{
+        color: rgba(236, 76, 1, 0.678);
+        transition: 0.6s;
+    }
+
+    header nav{
+        position: absolute;
+        width: 280px;
+        height: 100px;
+        left: 50%;
+        bottom: 20%;
+        margin: 0 auto;
+        margin-left: -150px;
+    }
+
+    /*========= レイアウトのためのCSS ===============*/
+
+    #wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    color: #fff;
+    }
+
+    a{
+    color: #fff;
+    }
+
+    /*========= particle js を描画するエリア設定 ===============*/
+
+    html,body{
+    height: 100vh;/*高さを100%にして描画エリアをとる*/
+    }
+
+    #particles-js{ 
+    position:fixed;/*描画固定*/
+    z-index:-1;/*描画を一番下に*/
+    width: 100%;
+    height: 100vh;
+    background-color:rgb(35, 35, 35);/*背景色*/
+    }
+
+    #wrapper{
+    position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+    z-index: -1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+    width:100%;
+    height: 100vh;
+    }
+
+    article{
+        background-color: #fff;
+    }
+
+
+    /*---------スライドイン-----------*/
+    .icon-h1{
+        animation: SlideIn 2.0s;
+    }
+      
+      /* CSSアニメーションの設定 */
+    @keyframes SlideIn {
+    0% {
+        opacity: 0;/*初期状態では透明に*/
+        transform: translateX(64px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    }
+  
+  
+    /*------------------------------ローダー---------------------*/
+    .box.loaded{
+        opacity:0;
+        visibility:hidden;
+        pointer-events:none;
+      }
+
+      .box{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 9999;
+        -webkit-transition: all 1.2s ease; /* 1.2秒でフェードアウト */
+                transition: all 1.2s ease;
+        color: #fff; /* ローディングアニメーションカラー */
+        background-color: #333; /* 背景カラー */
+      }
+      /* 1番目のアニメーションの場合 */
+    .spinner.type1 {
+        border-radius: 50%;
+        border-width: 8px;
+        border-style: solid;
+        border-color: #fff rgba(255, 255, 255, 0.12) rgba(255, 255, 255, 0.12);
+        /* ローディング要素のアニメーションを指定 */
+        -webkit-animation: spinner1_1 1.5s infinite linear forwards;
+                animation: spinner1_1 1.5s infinite linear forwards;
+    }
+    .spinner.type1 span {
+        /* Loading テキストのアニメーションを指定 */
+        animation: spinner_loading_text 1.5s infinite linear forwards reverse;
+    }
+    
+    /* ローディング要素のアニメーション内容 */
+    @-webkit-keyframes spinner1_1 {
+        0% {
+        -webkit-transform: translate(-50%, -50%) rotate(0);
+                transform: translate(-50%, -50%) rotate(0);
+        }
+        100% {
+        -webkit-transform: translate(-50%, -50%) rotate(360deg);
+                transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
+    
+    @keyframes spinner1_1 {
+        0% {
+        -webkit-transform: translate(-50%, -50%) rotate(0);
+                transform: translate(-50%, -50%) rotate(0);
+        }
+        100% {
+        -webkit-transform: translate(-50%, -50%) rotate(360deg);
+                transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
+    
+    /* Loading テキストのアニメーション内容 */
+    @-webkit-keyframes spinner_loading_text {
+        0% {
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%) rotate(0deg);
+                transform: translate(-50%, -50%) rotate(0deg);
+        }
+        50% {
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%) rotate(180deg);
+                transform: translate(-50%, -50%) rotate(180deg);
+        }
+        100% {
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%) rotate(360deg);
+                transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
+    @keyframes spinner_loading_text {
+        0% {
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%) rotate(0deg);
+                transform: translate(-50%, -50%) rotate(0deg);
+        }
+        50% {
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%) rotate(180deg);
+                transform: translate(-50%, -50%) rotate(180deg);
+        }
+        100% {
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%) rotate(360deg);
+                transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
+    .spinner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        -webkit-transform-origin: center;
+                transform-origin: center;
+        width: 120px;
+        height: 120px;
+    }
+    
+    /* Loading テキスト */
+    .spinner span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        font-size: 12px;
+    }
+
+    /*---------------ローダー終了-------------------*/
+    
+    /*------------SNSリンク------------------*/
+    .flowbtn10{
+        display:inline-block;	
+        font-size:20px;
+        text-decoration:none;
+        transition:.5s;
+        color:#444;	
+        margin: 10px;
+        }
+        /* インスタ・pocket・ラインだけ少し大きく */
+        .flowbtn10 .fa-instagram,.flowbtn10 .fa-get-pocket,.flowbtn10 .fa-get-pocket,.flowbtn10 .fa-line{
+        font-size:20px;
+        }
+        /* Twitterマウスホバー時 */
+        .flowbtn10 .fa-twitter:hover{
+        color:#55acee;
+        }
+        /* Instagramマウスホバー時 */
+        .flowbtn10 .fa-instagram:hover{
+        color:#c6529a;
+        }
+        /* Facebookマウスホバー時 */
+        .flowbtn10 .fa-facebook-f:hover{
+        color:#3b5998;
+        }
+        /* ulタグの内側余白を０にする */
+        ul.snsbtniti{
+        padding:0!important;
+        }
+        /* アイコン全体の位置 */
+        .snsbtniti{
+        display:flex;
+        flex-flow:row wrap;
+        justify-content:center;	
+        }
+        /* アイコン同士の余白 */
+        .snsbtniti li{
+        text-align:center!important;
+        }
+
+        footer{
+            background-color: #fff;
+        }
+
+        #copyright{
+            font-size: 10px;
+            color: #999;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        /*-------------本文設定------------------*/
+
+        .container{
+            background-color: #fff;
+        }
+
+        h2{
+            padding: 20px 0 15px 20px;
+            margin: 0 auto;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+
+        .container p {
+            color: rgb(82, 81, 81);
+            font-size: 13px;
+            font-weight: 400;
+            padding: 0 0 10px 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Hiragino kaku Gothic ProN", MyYuGothicM, Meiryo, sans-serif;
+        }
+
+        .profile{
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .link{
+            color: rgb(150, 48, 233);
+        }
+
+        /*----------スクロールアクション-----------*/
+        .photo-list li {
+            width: 42%;
+            margin-right: 2%;
+            margin-bottom: 2%;
+        }
+        .photo-list li:nth-child(3n) {
+            margin-right: 0;
+        }
+        
+        .photo-list {
+            padding: 10px 0;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .skill-p-1{
+            font-size: 14px!important;
+            font-weight: 600!important;
+            text-align: center;
+
+
+        }
+        .skill-div{
+            margin-top: 20px;
+        }
+
+        .photo{
+            width: 100px;
+        }
+
+        .laravel{
+            width: 120px;
+            margin-left: 20px;
+        }
+
+        .wordpress{
+            margin-left: 20px;
+        }
+
+        .html-css-js{
+            width: 200px;
+        }
+        /*---------ジグザグ境界面---------------*/
+        .zigzag {
+            position: relative;
+            width: 100%;
+            background: rgb(35, 35, 35);
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8));
+        }
+        .zigzag::before, .zigzag::after {
+            height: 20px;
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+        }
+        .zigzag::after {
+            bottom: -20px;
+            background: linear-gradient(135deg, rgb(35, 35, 35) 10px, transparent 0), linear-gradient(225deg, rgb(35, 35, 35) 10px, transparent 0);
+            background-size: 29px 20px;
+        }
+
+        /*-----コンタクト---*/
+        .contact{
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+            padding: 25px 0;
+        }
+
+        #formWrap {
+            width:95%;
+            margin:0 auto;
+        }
+        table.formTable th, table.formTable td {
+            width:auto;
+            display:block;
+        }
+        table.formTable th {
+            margin-top:5px;
+            border-bottom:0;
+        }
+        form input[type="text"], form textarea {
+            width:100%;
+            padding:5px;
+            font-size:11px;
+            display:block;
+        }
+        form input[type="submit"], form input[type="reset"], form input[type="button"] {
+            display:block;
+            width:100%;
+            height:20px;
+            font-size: 10px;
+        }
+        
+        form textarea{
+            margin: initial;
+            height: 90px;
+        }
+        
+        .fa-paper-plane{
+            text-align: center;
+            font-size: 22px;
+            color: #555;
+            margin-bottom: 3px;
+            
+        }
+        
+        .button1{
+            height: 50px;
+            width: 50px;
+            border: solid 2px #555;
+            border-radius: 50%;/*角丸*/
+            margin-top: 10px;
+        }
+
+        

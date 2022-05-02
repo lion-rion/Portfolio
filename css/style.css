@@ -4,7 +4,6 @@
 @media screen and (min-width: 981px){
     body{
         font-family: 'Economica', sans-serif;
-        
     }
 
     .container{
@@ -86,8 +85,41 @@
         width: 150px;
     }
 
-    
+    .tools_img_spe_1{
+        width: 250px;
+    }
 
+    .center{
+        justify-content: center;
+    }
+
+    .tools_img_1{
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        margin-top: 20px;
+        margin-left: 210px;
+        
+    }
+
+    .tools_img_spe_2{
+        width: 70px;
+        margin-top: 20px;
+        margin-left: 200px;
+    }
+    .between{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer{
+        margin-top: 300px;
+        margin-bottom: 100px;
+        color: #fff;
+        text-align: center;
+        font-size: 30px;
+
+    }
      /*========= particle js を描画するエリア設定 ===============*/
     
         #particles-js{ 
